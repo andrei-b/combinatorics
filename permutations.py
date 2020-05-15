@@ -1,4 +1,4 @@
-ddef permutes(s, n = len(n)):
+def permutes(s, n):
     for i in range(n):
         if (n > 1):
             for s in permutes(s, n - 1):
