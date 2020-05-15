@@ -1,16 +1,9 @@
-def rshift(s, n):
-    t = s[n-1]
-    s.remove(t)
-    s.insert(0, t)
-    return s
-
-
-def permutations(s, n):
+def permutes(s, n):
     for i in range(n):
         if (n > 1):
-            for s in permutations(s, n - 1):
+            for s in permutes(s, n - 1):
                 yield s
-            s = rshift(s, n)
+            s[n - 1], s[0] = s[0], s[n-1]
         else:
             yield s
 
