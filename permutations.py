@@ -1,9 +1,10 @@
-def permutes(s, n):
+ddef permutes(s, n):
     for i in range(n):
         if (n > 1):
             for s in permutes(s, n - 1):
                 yield s
-            s[n - 1], s[0] = s[0], s[n-1]
+            s.insert(0, s[n-1])
+            s.pop(n)
         else:
             yield s
 
